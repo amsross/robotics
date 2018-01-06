@@ -1,0 +1,26 @@
+# GitHub presets
+safe: true
+lsi: false
+
+# custom settings
+repository: amsross/robotics
+author: Matt Ross
+author_email: matt@mattross.io
+destination: ./_site
+exclude:
+  - docker-compose.yml
+  - .*~
+  - .git
+name: robotics
+permalink: pretty
+source: .
+timezone: America/New_York
+url: https://www.mattross.io/robotics
+host: "0.0.0.0"
+theme: jekyll-theme-hacker
+plugins:
+- jekyll-github-metadata
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-sitemap
+- jemoji
