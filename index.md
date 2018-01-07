@@ -14,7 +14,7 @@
 * [Arduino Web IDE](https://create.arduino.cc)
 
 ## Gotchas
-1. Because I used a Nano with a different USB module that the official Nano, I needed to download drivers for it.  ([windows](assets/CH341SER.zip) [linux](assets/CH341SER_LINUX.zip) [mac](assets/CH341SER_MAC.zip))
+1. Because I used a Nano with a different USB module than the official Nano, I needed to download drivers for it.  ([windows](assets/CH341SER.zip) [linux](assets/CH341SER_LINUX.zip) [mac](assets/CH341SER_MAC.zip))
 
 2. I initially started with a USB-to-Mini-B cable that was not capable of transmitting data (only power). It took me a while to figure this out.
 
