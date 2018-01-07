@@ -3,7 +3,10 @@ safe: true
 lsi: false
 
 # custom settings
+sass:
+  style: compressed
 repository: amsross/robotics
+title: robotics
 author: Matt Ross
 author_email: matt@mattross.io
 destination: ./_site

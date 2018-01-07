@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+# Arduino Nano Motor Control
 
-You can use the [editor on GitHub](https://github.com/amsross/io-mattross-robotics/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Parts List
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* [Arduino Nano V3.0 with ATMEGA328P Module](https://smile.amazon.com/gp/product/B071JBYDGM)
+* [HC-SR04 Ultrasonic Sensor Distance Module](https://smile.amazon.com/gp/product/B01MA4O5G5)
+* [L298N Motor Drive Controller Board](https://smile.amazon.com/gp/product/B06X9D1PR9)
+* [3-6V DC Gear Motors with Wheels](https://smile.amazon.com/gp/product/B072HRR8W4)
+* [USB-to-Mini-B Cable](https://smile.amazon.com/dp/B00NH13S44/)
+* [Jumper Wires](https://smile.amazon.com/dp/B072L1XMJR)
+* [Mini Breadboards](https://smile.amazon.com/gp/product/B01EV6SBXQ)
+* [AA batteries](https://smile.amazon.com/gp/product/B00NTCH52W)
+* [4xAA Battery Holders](https://smile.amazon.com/gp/product/B077C1QGC7)
+* [Arduino Web IDE](https://create.arduino.cc)
 
-### Markdown
+## Gotchas
+1. Because I used a Nano with a different USB module that the official Nano, I needed to download drivers for it.  ([windows](assets/CH341SER.zip) [linux](assets/CH341SER_LINUX.zip) [mac](assets/CH341SER_MAC.zip))
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+2. I initially started with a USB-to-Mini-B cable that was not capable of transmitting data (only power). It took me a while to figure this out.
 
-```markdown
-Syntax highlighted code block
+## Setup
 
-# Header 1
-## Header 2
-### Header 3
+{% include image.html file="assets/img/diagram.png"
+  alt="Wiring Diagram"
+  caption="Wiring Diagram"
+  %}
 
-- Bulleted
-- List
+## Libraries
 
-1. Numbered
-2. List
+* [AndreaLombardo/L298N](https://github.com/AndreaLombardo/L298N)
+* [jeremylindsayni/Bifrost.Arduino.Sensors.HCSR04](https://github.com/jeremylindsayni/Bifrost.Arduino.Sensors.HCSR04)
 
-**Bold** and _Italic_ and `Code` text
+## Code
 
-[Link](url) and ![Image](src)
+```cpp
+#include <L298N.h>
+#include <hcsr04.h>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/amsross/io-mattross-robotics/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### References
+* [Tutorial – L298N Dual Motor Controller Modules and Arduino](http://tronixstuff.com/2014/11/25/tutorial-l298n-dual-motor-controller-modules-and-arduino/)
+* [How to Build an Arduino Self-balancing Robot](https://create.arduino.cc/projecthub/zac-jackson/how-to-build-an-arduino-self-balancing-robot-46d992)
