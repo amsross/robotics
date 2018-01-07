@@ -27,8 +27,8 @@
 
 ## Libraries
 
-* [AndreaLombardo/L298N](https://github.com/AndreaLombardo/L298N)
-* [jeremylindsayni/Bifrost.Arduino.Sensors.HCSR04](https://github.com/jeremylindsayni/Bifrost.Arduino.Sensors.HCSR04)
+* [L298N](https://github.com/AndreaLombardo/L298N)
+* [HCSR04](https://github.com/jeremylindsayni/Bifrost.Arduino.Sensors.HCSR04)
 
 ## Code
 
@@ -40,3 +40,4 @@
 #### References
 * [Tutorial – L298N Dual Motor Controller Modules and Arduino](http://tronixstuff.com/2014/11/25/tutorial-l298n-dual-motor-controller-modules-and-arduino/)
 * [How to Build an Arduino Self-balancing Robot](https://create.arduino.cc/projecthub/zac-jackson/how-to-build-an-arduino-self-balancing-robot-46d992)
+* [Controlling DC Motors with the L298N Dual H-Bridge and an Arduino](https://dronebotworkshop.com/dc-motors-l298n-h-bridge/)
