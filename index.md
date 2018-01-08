@@ -71,7 +71,7 @@ void left() {
   motorB.backward();
 }
 
-void righ() {
+void right() {
   motorA.backward();
   motorB.forward();
 }
