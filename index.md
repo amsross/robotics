@@ -20,7 +20,7 @@
 
 ## Setup
 
-{% include image.html file="assets/img/diagram.png"
+{% include image.html file="assets/img/diagram_bb.png"
   alt="Wiring Diagram"
   caption="Wiring Diagram"
   %}
@@ -34,7 +34,7 @@
 
 ### Motors
 
-```arduino
+```cpp
 #include <L298N.h>
 
 // Motor A
@@ -91,7 +91,7 @@ void loop() {
 
 ### Sensor
 
-```arduino
+```cpp
 #include <hcsr04.h>
 
 #define TRIG 12
@@ -107,9 +107,11 @@ void setup(){
 void loop() {
   Serial.println(sensorA.distanceInMillimeters());
   delay(250);
-}```
+}
+```
 
 #### References
-* [Tutorial – L298N Dual Motor Controller Modules and Arduino](http://tronixstuff.com/2014/11/25/tutorial-l298n-dual-motor-controller-modules-and-arduino/)
-* [How to Build an Arduino Self-balancing Robot](https://create.arduino.cc/projecthub/zac-jackson/how-to-build-an-arduino-self-balancing-robot-46d992)
+* [Arduino Nano Pinout](http://www.pighixxx.com/test/wp-content/uploads/2014/11/nano.png)
 * [Controlling DC Motors with the L298N Dual H-Bridge and an Arduino](https://dronebotworkshop.com/dc-motors-l298n-h-bridge/)
+* [How to Build an Arduino Self-balancing Robot](https://create.arduino.cc/projecthub/zac-jackson/how-to-build-an-arduino-self-balancing-robot-46d992)
+* [Tutorial – L298N Dual Motor Controller Modules and Arduino](http://tronixstuff.com/2014/11/25/tutorial-l298n-dual-motor-controller-modules-and-arduino/)
