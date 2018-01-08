@@ -34,22 +34,22 @@
 
 ### Motors
 
-```cpp
+```arduino
 #include <L298N.h>
 
 // Motor A
-int enA = 10; // D10
-int in1 = 9;  // D9
-int in2 = 8;  // D8
+#define ENA 10 // D10
+#define IN1 9  // D9
+#define IN2 8  // D8
 
 // Motor B
-int in3 = 7;  // D7
-int in4 = 6;  // D6
-int enB = 5;  // D5
+#define IN3 7  // D7
+#define IN4 6  // D6
+#define ENB 5  // D5
 
 // create both motor instances
-L298N motorA(enA, in1, in2);
-L298N motorB(enB, in3, in4);
+L298N motorA(ENA, IN1, IN2);
+L298N motorB(ENB, IN3, IN4);
 
 void setup() {
   // set the motor speed between 0 and 255
@@ -91,9 +91,23 @@ void loop() {
 
 ### Sensor
 
-```cpp
+```arduino
 #include <hcsr04.h>
-```
+
+#define TRIG 12
+#define ECHO 13
+
+// TRIG, ECHO, MIN_RANGE, MAX_RANGE
+HCSR04 sensorA(TRIG, ECHO, 20, 4000);
+
+void setup(){
+  Serial.begin(9600);
+}
+
+void loop() {
+  Serial.println(sensorA.distanceInMillimeters());
+  delay(250);
+}```
 
 #### References
 * [Tutorial – L298N Dual Motor Controller Modules and Arduino](http://tronixstuff.com/2014/11/25/tutorial-l298n-dual-motor-controller-modules-and-arduino/)
