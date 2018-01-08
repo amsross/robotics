@@ -25,14 +25,15 @@
   caption="Wiring Diagram"
   %}
 
-## Libraries
+## Code
+
+### Libraries
 
 * [L298N](https://github.com/AndreaLombardo/L298N)
 * [HCSR04](https://github.com/jeremylindsayni/Bifrost.Arduino.Sensors.HCSR04)
 
-## Code
-
 ### Motors
+
 ```cpp
 #include <L298N.h>
 
@@ -86,6 +87,12 @@ void loop() {
   right();
   delay(2000);
 }
+```
+
+### Sensor
+
+```cpp
+#include <hcsr04.h>
 ```
 
 #### References
