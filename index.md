@@ -32,9 +32,60 @@
 
 ## Code
 
+### Motors
 ```cpp
 #include <L298N.h>
-#include <hcsr04.h>
+
+// Motor A
+int enA = 10; // D10
+int in1 = 9;  // D9
+int in2 = 8;  // D8
+
+// Motor B
+int in3 = 7;  // D7
+int in4 = 6;  // D6
+int enB = 5;  // D5
+
+// create both motor instances
+L298N motorA(enA, in1, in2);
+L298N motorB(enB, in3, in4);
+
+void setup() {
+  // set the motor speed between 0 and 255
+  motorA.setSpeed(255);
+  motorB.setSpeed(255);
+}
+
+void forward() {
+  motorA.forward();
+  motorB.forward();
+}
+
+void backward() {
+  motorA.backward();
+  motorB.backward();
+}
+
+void left() {
+  motorA.forward();
+  motorB.backward();
+}
+
+void righ() {
+  motorA.backward();
+  motorB.forward();
+}
+
+void loop() {
+  forward();
+  delay(2000);
+  backward();
+  delay(2000);
+  left();
+  delay(2000);
+  right();
+  delay(2000);
+}
 ```
 
 #### References
