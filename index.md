@@ -94,8 +94,8 @@ void loop() {
 ```cpp
 #include <hcsr04.h>
 
-#define TRIG 12
-#define ECHO 13
+#define TRIG 3
+#define ECHO 4
 
 // TRIG, ECHO, MIN_RANGE, MAX_RANGE
 HCSR04 sensorA(TRIG, ECHO, 20, 4000);
