@@ -25,89 +25,17 @@
   caption="Wiring Diagram"
   %}
 
-## Code
+## Programming
 
 ### Libraries
 
 * [L298N](https://github.com/AndreaLombardo/L298N)
 * [HCSR04](https://github.com/jeremylindsayni/Bifrost.Arduino.Sensors.HCSR04)
 
-### Motors
+### Code
 
 ```cpp
-#include <L298N.h>
-
-// Motor A
-#define ENA 10 // D10
-#define IN1 9  // D9
-#define IN2 8  // D8
-
-// Motor B
-#define IN3 7  // D7
-#define IN4 6  // D6
-#define ENB 5  // D5
-
-// create both motor instances
-L298N motorA(ENA, IN1, IN2);
-L298N motorB(ENB, IN3, IN4);
-
-void setup() {
-  // set the motor speed between 0 and 255
-  motorA.setSpeed(255);
-  motorB.setSpeed(255);
-}
-
-void forward() {
-  motorA.forward();
-  motorB.forward();
-}
-
-void backward() {
-  motorA.backward();
-  motorB.backward();
-}
-
-void left() {
-  motorA.forward();
-  motorB.backward();
-}
-
-void right() {
-  motorA.backward();
-  motorB.forward();
-}
-
-void loop() {
-  forward();
-  delay(2000);
-  backward();
-  delay(2000);
-  left();
-  delay(2000);
-  right();
-  delay(2000);
-}
-```
-
-### Sensor
-
-```cpp
-#include <hcsr04.h>
-
-#define TRIG 3
-#define ECHO 4
-
-// TRIG, ECHO, MIN_RANGE, MAX_RANGE
-HCSR04 sensorA(TRIG, ECHO, 20, 4000);
-
-void setup(){
-  Serial.begin(9600);
-}
-
-void loop() {
-  Serial.println(sensorA.distanceInMillimeters());
-  delay(250);
-}
+{% include_relative robot.ino %}
 ```
 
 #### References
