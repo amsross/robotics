@@ -12,6 +12,7 @@
 * [AA batteries](https://smile.amazon.com/gp/product/B00NTCH52W)
 * [4xAA Battery Holders](https://smile.amazon.com/gp/product/B077C1QGC7)
 * [Arduino Web IDE](https://create.arduino.cc)
+* [mBlock](http://www.mblock.cc/)
 
 ## Gotchas
 1. Because I used a Nano with a different USB module than the official Nano, I needed to download drivers for it.  ([windows](assets/CH341SER.zip) [linux](assets/CH341SER_LINUX.zip) [mac](assets/CH341SER_MAC.zip))
